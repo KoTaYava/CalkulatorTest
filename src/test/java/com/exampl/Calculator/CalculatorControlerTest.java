@@ -26,8 +26,26 @@ class CalculatorServiceImplTest {
     @Test
     void plus() {
         int expected = 10;
-        int result = calculatorService.plus(3, 7);
+        int result = calculatorService.plus(10, 0);
         Assertions.assertEquals(expected, result);
+    }
+    @Test
+    void minus() {
+        int expected = 1;
+        int result = calculatorService.minus(3, 2);
+        Assertions.assertEquals(expected,result);
+    }
+    @Test
+    void multiplication() {
+        int expected = 12;
+        int resukt = calculatorService.multiply(-3, -4);
+        Assertions.assertEquals(expected,resukt);
+    }
+    @Test
+    void divide() {
+        int expected = 2;
+        int result = calculatorService.divide(-12, -6);
+        Assertions.assertEquals(expected,result);
     }
 
     @ParameterizedTest
